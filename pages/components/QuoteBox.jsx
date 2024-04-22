@@ -11,7 +11,7 @@ const containerStyle = {
     flexDirection: 'column',
     justifyContent: 'center',
     height: '100vh',
-    width: '35%',
+    width: '500px',
     margin: '0 auto',
     padding: '0%',
 }
@@ -26,16 +26,16 @@ const quoteBoxStyle = {
 }
 
 const textStyle = {
-    padding: '10%',
-    fontSize: '1.5em',
+    padding: '10% 10% 5% 10%',
+    fontSize: '1.75em',
     transition: 'opacity 1s',
-    fontSize: '1.5em',
 }
 
 const authorStyle = {
     display: 'flex',
     justifyContent: 'flex-end',
-    margin: '5% 10% 5% 0%',
+    margin: '0% 10% 5% 0%',
+    fontSize: '1.2em',
     transition: 'opacity 1s',
 }
 
@@ -43,14 +43,14 @@ const btnStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '2em',
+    width: '2.5em',
+    height: '2.5em',
     backgroundColor: 'black',
     color: 'lightblue',
     cursor: 'pointer',
     padding: '3%',
     fontSize: '1.5em',
     textAlign: 'center',
-    height: '2em',
     borderRadius: '10px',
 }
 
@@ -85,7 +85,7 @@ const QuoteBox = () => {
         quoteContainer.style.opacity = 0;
         authorContainer.style.opacity = 0;
         setTimeout(()=>{
-            quoteContainer.innerText = quote
+            quoteContainer.innerHTML = `<i class="fi fi-ss-comment-quote"></i> ${quote}`
             authorContainer.innerText = `- ${author}`
             quoteContainer.style.opacity = 1
             authorContainer.style.opacity = 1
@@ -100,12 +100,12 @@ const QuoteBox = () => {
                 <div id="text" className={`${della.className}`} style={textStyle}>
                     {/* TO BE POPULATED WITH JS */}
                 </div>
-                <div id="author" className={della.className} style={authorStyle}>
+                <div id="author" style={authorStyle}>
                     {/* TO BE POPULATED WITH JS */}
                 </div>
                 <div id="btnContainer" style={btnContainerStyle}>
                     <TweetButton id="tweet-quote" url={"https://twitter.com/intent/tweet?text=" + encodeURIComponent('"' + quote + '" ' + author)} style={btnStyle}>
-                        <i class="fi fi-br-bird"></i>
+                        <i class="fi fi-brands-twitter-alt"></i>
                     </TweetButton>
                     <NewQuoteButton id={"new-quote"} func={setResponse} style={btnStyle}>
                         <i class="fi fi-br-rotate-right"></i>
