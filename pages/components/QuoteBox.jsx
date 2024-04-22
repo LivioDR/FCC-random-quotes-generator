@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import getRandomQuote from "../services/getRandomQuote";
-import NewQuoteButton from "./NewQuoteButton";
-import TweetButton from "./TweetButton";
+import getRandomQuote from "../../services/getRandomQuote.js";
+import NewQuoteButton from "./NewQuoteButton.jsx";
+import TweetButton from "./TweetButton.jsx";
 import { Della_Respira } from 'next/font/google'
 const della = Della_Respira({weight: "400", subsets: ["latin"]})
 
