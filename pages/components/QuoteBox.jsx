@@ -105,10 +105,10 @@ const QuoteBox = () => {
                 </div>
                 <div id="btnContainer" style={btnContainerStyle}>
                     <TweetButton id="tweet-quote" url={"https://twitter.com/intent/tweet?text=" + encodeURIComponent('"' + quote + '" ' + author)} style={btnStyle}>
-                        <i class="fi fi-brands-twitter-alt"></i>
+                        <i className="fi fi-brands-twitter-alt"></i>
                     </TweetButton>
                     <NewQuoteButton id={"new-quote"} func={setResponse} style={btnStyle}>
-                        <i class="fi fi-br-rotate-right"></i>
+                        <i className="fi fi-br-rotate-right"></i>
                     </NewQuoteButton>
                 </div>
             </div>  
